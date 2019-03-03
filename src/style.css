@@ -1,0 +1,63 @@
+
+.display-flex
+{
+      background-image: url("back.jpg");  
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: "Alegreya Sans", sans-serif;
+      margin: 5% 10% 50% 35%;
+      width: 30%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid white;
+      box-shadow:
+      /* The top layer shadow */
+          0 1px 1px rgba(0,0,0,0.15);
+        
+      padding: 30px;
+}
+  .current {
+    font-family: "Alegreya Sans", sans-serif;
+	  font-weight: 300;
+    text-align: center;
+    color:black;
+	  overflow: hidden;  
+    margin: 0%; 
+    padding: 10% 5% 20%;
+    position: relative;
+  }
+  .location {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0%;
+  }
+  .date {
+
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .conditions{
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+  .temprature{
+    font-size: 2em;
+    line-height: 1.3;    
+  }
+
+  .weatherIcon{
+    text-align: center;
+    color:black;
+	  overflow: hidden;  
+    margin: 0%; 
+    padding: 10% 5% 20%;
+    position: relative;
+    height: auto;
+    margin: 10% auto 7%;
+    width: auto;
+  }
+  
