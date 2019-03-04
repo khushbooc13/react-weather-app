@@ -33,6 +33,32 @@ class Weather extends Component {
     };
 
     /**
+     * Return background based on climate condition
+     */
+    setBackgound= param =>{
+        switch(param)
+        {
+            case "Haze":{
+                return "#009688";
+            }
+            case "Clear":{
+                return "#ff8a65";
+            }
+            case "Clouds":{
+                return "#4dd0e1"
+            }
+            case "Rain":{
+                return "#78909c";
+            }
+            case "Snow":{
+                return "#9e9e9e";
+            }
+            default:
+                return "#f44336";
+        }
+    }
+
+    /**
      * Converts date in Day mm/dd/yyyy format
      */
     setDate = () => {
@@ -74,14 +100,14 @@ class Weather extends Component {
     }
     render() {
         return (
-                <div className="card">
+                <div className="card" style={{backgroundColor:this.setBackgound(this.props.data.weather[0].main)}}>
                     <h1 className="location">{this.props.data.name}, {this.props.data.sys.country}</h1>
                     <h2 className="date">{this.setDate()}</h2>
                     <div className="weatherIcon">
                         <img
                             src={this.setImage(this.props.data.weather[0].main)}
-                            width="150"
-                            height="150"
+                            width="140"
+                            height="140"
                             alt="weather-type"
                         />
                         <p className="temp">
