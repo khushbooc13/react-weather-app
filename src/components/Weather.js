@@ -75,7 +75,7 @@ class Weather extends Component {
     render() {
         return (
                 <div className="card">
-                    <h1 className="location">{this.props.data.name}</h1>
+                    <h1 className="location">{this.props.data.name}, {this.props.data.sys.country}</h1>
                     <h2 className="date">{this.setDate()}</h2>
                     <div className="weatherIcon">
                         <img
