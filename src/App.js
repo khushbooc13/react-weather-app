@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import cloud1 from './cloud1.png';
-import './style.css';
-import WeatherForecast from './WeatherForecast';
+import React, { Component } from "react";
+import "./style.css";
+import WeatherForecast from "./containers/WeatherForecast";
 
 class App extends Component {
-  render() {
-    return (
-       <div>
-         <WeatherForecast/>
-       </div>
-    );
-  }
+    render() {
+        return <WeatherForecast />;
+    }
 }
 
 export default App;
