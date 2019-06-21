@@ -4,6 +4,7 @@ import Cloud from "../Images/Cloud.png"
 import Rain from "../Images/Rain.png"
 import CloudSun from "../Images/CloudSun.png";
 import Snow from "../Images/Snow.png";
+import Form from "../components/Form";
 import "../style.css";
 
 
