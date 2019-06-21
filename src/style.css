@@ -1,8 +1,10 @@
-html,
-body {
+html,body {
     margin: 0;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 input[type=text] {
@@ -22,6 +24,7 @@ input[type=submit] {
 }
 
 .card {
+<<<<<<< HEAD
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 20%;
@@ -34,25 +37,56 @@ input[type=submit] {
     text-align: center;
     font-family: arial;
     overflow: hidden;
+=======
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 20%;
+  height: 80%;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  background-color: #4dd0e1;
+  margin: 5% 10% 60% 40%;
+  border-radius: 5px;
+  text-align: center;
+  font-family: arial;
+  overflow: hidden;
+>>>>>>> f06d8e0872bf8094cc7b630137dfb677b41e2ddc
 }
 
 .location {
+<<<<<<< HEAD
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 300;
     font-size: 2em;
     font-weight: 700;
     padding-top: 15px;
+=======
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  font-weight: 700;
+  padding-top: 15px;
+>>>>>>> f06d8e0872bf8094cc7b630137dfb677b41e2ddc
 }
 
 .date {
+<<<<<<< HEAD
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 300;
     font-size: 1em;
     font-weight: 300;
     text-transform: uppercase;
+=======
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+>>>>>>> f06d8e0872bf8094cc7b630137dfb677b41e2ddc
 }
 
 .weatherIcon {
+<<<<<<< HEAD
     padding: 5px;
     ;
     position: relative;
@@ -66,9 +100,23 @@ input[type=submit] {
     font-weight: 300;
     font-size: 3em;
     line-height: 1.1;
+=======
+  padding: 5px;
+  position: relative;
+  height: 200px;
+  margin: 10% auto 7%;
+  width: 200px;
+}
+.temp {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+  line-height: 1.3;
+>>>>>>> f06d8e0872bf8094cc7b630137dfb677b41e2ddc
 }
 
 .conditions {
+<<<<<<< HEAD
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 300;
     font-size: 1.5em;
@@ -79,3 +127,16 @@ input[type=submit] {
 .imageGif {
     margin: 10% 10% 60% 40%;
 }
+=======
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+@media screen and(max-width:600px) {
+  .card {
+    min-width: 20%;
+    min-height: 70%;
+  }
+}
+>>>>>>> f06d8e0872bf8094cc7b630137dfb677b41e2ddc

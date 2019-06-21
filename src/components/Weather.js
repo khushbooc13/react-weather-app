@@ -29,7 +29,7 @@ class Weather extends Component {
                 return Snow;
             }
             default:
-                return "Failed";
+                return Cloud;
         }
     };
 
