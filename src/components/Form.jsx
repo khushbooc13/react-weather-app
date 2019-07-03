@@ -4,9 +4,9 @@ import "../style.css";
 class Form extends React.Component {
     render() {
         return (
-            <form onSubmit={this.props.getWeather}>
+            <form>
                 <input type="text" name="city" placeholder="City"  />
-                <input type="submit" value="Get Weather" />
+                <input type="submit" value="Get Weather" onClick={this.props.getWeather}/>
             </form>
         )
     }

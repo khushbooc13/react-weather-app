@@ -24,6 +24,7 @@ class WeatherForecast extends React.Component {
             [event.target.name]: event.target.value,
         });
         // console.log(event.target.name, event.target.value);
+        
     }
 
     /** 
@@ -43,7 +44,7 @@ class WeatherForecast extends React.Component {
                 this.setState({ loaded: true });
             })
             .catch(error => {
-                console.log(error);
+                console.log(error,e);
             });
        // console.log(url);
     };
@@ -52,7 +53,8 @@ class WeatherForecast extends React.Component {
         return (
             <>
                 <Form getWeather={this.getWeather} />
-                {this.state.loaded ? <Weather data={this.state.weatherData} /> : null }
+                <Weather data={this.state.weatherData}/>
+                {/* {this.state.loaded ? <Weather data={this.state.weatherData} /> : null } */}
                 </>
 
         );

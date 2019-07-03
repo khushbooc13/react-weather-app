@@ -9,6 +9,10 @@ import "../style.css";
 
 
 class Weather extends Component {
+
+    constructor(props) {
+        super(props);
+    }
     /**
      * Returns image based on forecast
      */
@@ -19,13 +23,13 @@ class Weather extends Component {
             case "Clear": {
                 return CloudSun;
             }
-            case "Clouds":{
+            case "Clouds": {
                 return Cloud;
             }
-            case "Rain":{
-                return Rain; 
+            case "Rain": {
+                return Rain;
             }
-            case "Snow":{
+            case "Snow": {
                 return Snow;
             }
             default:
@@ -36,22 +40,21 @@ class Weather extends Component {
     /**
      * Return background based on climate condition
      */
-    setBackgound= param =>{
-        switch(param)
-        {
-            case "Haze":{
+    setBackgound = param => {
+        switch (param) {
+            case "Haze": {
                 return "#009688";
             }
-            case "Clear":{
+            case "Clear": {
                 return "#ff8a65";
             }
-            case "Clouds":{
+            case "Clouds": {
                 return "#4dd0e1"
             }
-            case "Rain":{
+            case "Rain": {
                 return "#78909c";
             }
-            case "Snow":{
+            case "Snow": {
                 return "#9e9e9e";
             }
             default:
@@ -100,31 +103,32 @@ class Weather extends Component {
         this.setDate();
     }
     render() {
+        console.log(this.props.data)
         return (
-                <div className="card" style={{backgroundColor:this.setBackgound(this.props.data.weather[0].main)}}>
-                    <h1 className="location">{this.props.data.name}, {this.props.data.sys.country}</h1>
-                    <h2 className="date">{this.setDate()}</h2>
-                    <div className="weatherIcon">
-                        <img
-                            src={this.setImage(this.props.data.weather[0].main)}
-                            width="140"
-                            height="140"
-                            alt="weather-type"
-                        />
-                        <p className="temp">
-                            {this.props.data.main
-                                ? Math.floor(this.props.data.main.temp)
-                                : ""}
-                            &#176;c
+            <div className="card" style={{ backgroundColor: this.setBackgound(this.props.data.weather[0].main) }}>
+                <h1 className="location">{this.props.data.name}, {this.props.data.sys.country}</h1>
+                <h2 className="date">{this.setDate()}</h2>
+                <div className="weatherIcon">
+                    <img
+                        src={this.setImage(this.props.data.weather[0].main)}
+                        width="140"
+                        height="140"
+                        alt="weather-type"
+                    />
+                    <p className="temp">
+                        {this.props.data.main
+                            ? Math.floor(this.props.data.main.temp)
+                            : ""}
+                        &#176;c
                         </p>
-                        <p className="conditions">
-                            {this.props.data.weather
-                                ? this.props.data.weather[0].main
-                                : ""}
-                        </p>
-                        <hr />
-                    </div>
+                    <p className="conditions">
+                        {this.props.data.weather
+                            ? this.props.data.weather[0].main
+                            : ""}
+                    </p>
+                    <hr />
                 </div>
+            </div>
         );
     }
 }
